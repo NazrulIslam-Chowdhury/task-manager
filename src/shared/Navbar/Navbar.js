@@ -23,13 +23,13 @@ const Navbar = () => {
                                 </Link>
                             </CNavItem>
                             <CNavItem>
-                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="#" active>Add Task</Link>
+                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="/add-task" active>Add Task</Link>
                             </CNavItem>
                             <CNavItem>
-                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="#" active>My Task</Link>
+                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="/my-task" active>My Task</Link>
                             </CNavItem>
                             <CNavItem>
-                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="#" active>
+                                <Link className='text-gray-800 hover:text-gray-800 px-4 py-2 hover:bg-gray-300 font-normal font-serif no-underline' to="/completed-task" active>
                                     Completed Task
                                 </Link>
                             </CNavItem>
