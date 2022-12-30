@@ -1,4 +1,4 @@
-import { CButton, CCollapse, CContainer, CForm, CNavbar, CNavbarBrand, CNavbarNav, CNavbarToggler, CNavItem } from '@coreui/react';
+import { CButton, CCollapse, CContainer, CForm, CNavbar, CNavbarBrand, CNavbarNav, CNavbarToggler, CNavItem, CPopover } from '@coreui/react';
 import React, { useContext, useState } from 'react';
 import '@coreui/coreui/dist/css/coreui.min.css';
 import { Link } from 'react-router-dom';
@@ -41,8 +41,23 @@ const Navbar = () => {
                                     Completed Task
                                 </Link>
                             </CNavItem>
+
+
+
                             <CNavItem>
-                                <img src={user?.photoURL} alt="" className='w-10 h-10 rounded-full' />
+                                {/* <img src={user?.photoURL} alt="" className='w-10 h-10 rounded-full' /> */}
+
+                                <CPopover
+                                    content={user &&
+                                        <>
+                                            <p>{user?.displayName}</p>
+                                            <p>{user?.email}</p>
+                                        </>
+                                    }
+                                    placement="bottom"
+                                >
+                                    <img src={user?.photoURL} alt="" className='w-10 h-10 rounded-full cursor-pointer' />
+                                </CPopover>
                             </CNavItem>
                         </CNavbarNav>
                         <CForm className="flex ml-1">
