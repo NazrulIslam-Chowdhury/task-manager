@@ -12,9 +12,9 @@ const Home = () => {
         const task = ref.current.value;
         console.log(task);
         const taskTitle = {
-            task
+            task_title: task
         }
-        fetch('http://localhost:5000/tasks', {
+        fetch('https://task-manager-server-ashy-seven.vercel.app/tasks', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
